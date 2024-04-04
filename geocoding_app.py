@@ -18,22 +18,34 @@ query_list = []
 for i in text_split: 
     query_list.append(i.strip())
 
-#if text_input:
-#    st.session_state.input = query_list
+# if text_input:
+#     st.session_state.input = query_list
 
 # strip whitespace and force uppercase 
 #text_input = text_input.upper().replace(" ", "")
 
 if st.button(label="Geocode", type="primary"): 
-    st.markdown("# Search result")
-
+    with st.spinner('Loading data ...'):
     # if PCD starts with GY, JE, IM
     # load alt sources
     # display message about accuracy 
+        df = pd.read_feather('./data/onspd_nov2023.feather')
+        df = df[['pcds', 'lat', 'long']]
+        results = df[df.pcds.isin(query_list)]
+        if len(results) < 2: 
+            results_title = "# Search result"
+        else: 
+            results_title = "# Search results"
 
-    df = pd.read_feather('./data/onspd_nov2023.feather')
 
-    if df.pcds.isin(query_list).any(): 
-        st.dataframe(df[df.pcds.isin(query_list)], hide_index=True, use_container_width=True)
+    if len(results)> 0: 
+        st.markdown(results_title)
+        st.dataframe(results, hide_index=True, use_container_width=True)
+        st.write("_Select cells to copy and paste or click the download icon to download as CSV_")
     else:
+        st.markdown(results_title)
         st.write("No match found")
+
+# Add button to show copyable text
+# st.code()
+
