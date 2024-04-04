@@ -31,7 +31,8 @@ if st.button(label="Geocode", type="primary"):
     # display message about accuracy 
         df = pd.read_feather('./data/onspd_nov2023.feather')
         df = df[['pcds', 'lat', 'long']]
-        results = df[df.pcds.isin(query_list)]
+        # results = df[df.pcds.isin(query_list)]
+        results = pd.DataFrame(query_list).rename(columns={0: 'pcds'}).merge(df, how='left') # this is slower but preserves the input order 
         if len(results) < 2: 
             results_title = "# Search result"
         else: 
