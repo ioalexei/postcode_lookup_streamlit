@@ -17,6 +17,8 @@ query_list = []
 for i in text_split: 
     query_list.append(i.upper().strip())
 
+crown_dep_pcds = ('JE', 'GY', 'IM')
+
 # strip whitespace and force uppercase 
 #text_input = text_input.upper().replace(" ", "")
 
@@ -31,7 +33,6 @@ if st.button(label="Geocode", type="primary"):
             # results = df[df.pcds.isin(query_list)]
             results = pd.DataFrame(query_list).rename(columns={0: 'pcds'}).merge(df, how='left') # this is slower but preserves the input order 
             # process crown dependencies 
-            crown_dep_pcds = ('JE', 'GY', 'IM')
             df_crown_deps = results[results.pcds.str.startswith(crown_dep_pcds)]
             results_no_cd = results[~results.pcds.str.startswith(crown_dep_pcds)]
             df_crown_deps_gcd = gcd(list(df_crown_deps.pcds.values))
@@ -50,6 +51,8 @@ if st.button(label="Geocode", type="primary"):
         st.markdown(results_title)
         st.dataframe(results, hide_index=True, use_container_width=True)
         st.write("_Select cells to copy and paste or click the download icon to download as CSV_")
+        if results.pcds.str.startswith(crown_dep_pcds).any(): 
+            st.write("Note: `GY`, `JE` and `IM` postcode locations are only approximate, accurate to the district level")
     else:
         st.markdown(results_title)
         st.write("No match found")
