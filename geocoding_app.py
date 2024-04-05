@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 import time
+from crown_dependencies import geocode_crown_dependencies as gcd
 
 st.title('Postcode lookup')
 #st.write("If entering multiple postcodes, add one per line")
@@ -18,9 +19,6 @@ query_list = []
 for i in text_split: 
     query_list.append(i.strip())
 
-# if text_input:
-#     st.session_state.input = query_list
-
 # strip whitespace and force uppercase 
 #text_input = text_input.upper().replace(" ", "")
 
@@ -34,6 +32,12 @@ if st.button(label="Geocode", type="primary"):
             df = df[['pcds', 'lat', 'long']]
             # results = df[df.pcds.isin(query_list)]
             results = pd.DataFrame(query_list).rename(columns={0: 'pcds'}).merge(df, how='left') # this is slower but preserves the input order 
+            # process crown dependencies 
+            crown_dep_pcds = ('JE', 'GY', 'IM')
+            df_crown_deps = results[results.pcds.str.startswith(crown_dep_pcds)]
+            df_crown_deps_gcd = gcd(list(df_crown_deps.pcds.values))
+            df_crown_deps_gcd = df_crown_deps_gcd.reset_index().rename(columns={'index':'pcds'})
+            results = results.merge(df_crown_deps_gcd, how='inner')
             if len(results) < 2: 
                 results_title = "# Search result"
             else: 

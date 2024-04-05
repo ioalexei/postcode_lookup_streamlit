@@ -1,0 +1,57 @@
+﻿Postcode district,Sector(s),Unit codes,Regex,Parish or island,Lat,Long
+GY1,"1, 2, 3, 4, 6, 7",,GY1 [1-7][A-Z][A-Z],Saint Peter Port,49.46,-2.54
+GY1,3,HR,GY1 3HR,Herm,49.47,-2.45
+GY1,4,AB,GY1 4AB,Jethou,49.46,-2.46
+GY2,all,,GY2 [0-9][A-Z][A-Z],Saint Sampson,49.48,-2.52
+GY3,all,,GY3 [0-9][A-Z][A-Z],Vale,49.49,-2.54
+GY4,all,,GY4 [0-9][A-Z][A-Z],Saint Martin,49.43,-2.56
+GY5,all,,GY5 [0-9][A-Z][A-Z],Castel,49.46,-2.57
+GY6,8,AA – QZ,GY6 8[A-Q][A-Z],Vale,49.49,-2.54
+GY6,8,RA – ZZ,GY6 8[R-Z][A-Z],Saint Andrew,49.45,-2.58
+GY7,9,,GY7 9[A-Z][A-Z],Saint Pierre du Bois & Saint Saviour,49.44,-2.63
+GY8,0,AA – JZ,GY8 0[A-J][A-Z],Forest,49.43,-2.6
+GY8,0,KA – ZZ,GY8 0[K-Z][A-Z],Torteval,49.43,-2.66
+GY9,3,,GY9 3[A-Z][A-Z],Alderney,49.72,-2.21
+GY10,1,,GY10 1[A-Z][A-Z],Sark,49.43,-2.36
+JE1,various,,JE1 [0-9][A-Z][A-Z],large users,49.18,-2.11
+JE2,3,,JE2 3[A-Z][A-Z],Saint Helier,49.18,-2.11
+JE2,4,,JE2 4[A-Z][A-Z],Saint Helier,49.18,-2.11
+JE2,6,,JE2 6[A-Z][A-Z],Saint Clement,49.17,-2.06
+JE2,7,,JE2 7[A-Z][A-Z],Saint Saviour,49.19,-2.09
+JE3,1,,JE3 1[A-Z][A-Z],Saint Lawrence,49.22,-2.14
+JE3,2,,JE3 2[A-Z][A-Z],Saint Ouen,49.23,-2.2
+JE3,3,,JE3 3[A-Z][A-Z],Saint Mary,49.23,-2.17
+JE3,4,,JE3 4[A-Z][A-Z],Saint John,49.25,-2.14
+JE3,5,,JE3 5[A-Z][A-Z],Trinity,49.23,-2.09
+JE3,6,,JE3 6[A-Z][A-Z],Saint Martin,49.22,-2.05
+JE3,7,,JE3 7[A-Z][A-Z],Saint Peter,49.21,-2.18
+JE3,8,,JE3 8[A-Z][A-Z],Saint Brélade,49.19,-2.2
+JE3,9,,JE3 9[A-Z][A-Z],Grouville,49.18,-2.05
+JE4,various,,JE4 [0-9][A-Z][A-Z],PO boxes,49.18,-2.11
+JE5,various,,JE5 [0-9][A-Z][A-Z],bespoke delivery,49.18,-2.11
+IM1,,,IM1 [1-9][A-Z][A-Z],Douglas,54.15,-4.482
+IM2,,,IM2 [1-9][A-Z][A-Z],Douglas,54.15,-4.482
+IM3,,,IM3 [1-9][A-Z][A-Z],Onchan,54.175,-4.455
+IM4,1,,IM4 1[A-Z][A-Z],Port Soderick and Santon,54.123,-4.531
+IM4,2,,IM4 2[A-Z][A-Z],Greeba and Braddan,54.155,-4.574
+IM4,3,,IM4 3[A-Z][A-Z],St John's and Foxdale,54.202,-4.642
+IM4,4,,IM4 4[A-Z][A-Z],Braddan parish,54.177,-4.552
+IM4,5,,IM4 5[A-Z][A-Z],Onchan parish,54.187,-4.439
+IM4,6,,IM4 6[A-Z][A-Z],Baldrine,54.203,-4.408
+IM4,7,,IM4 7[A-Z][A-Z],Laxey and Lonan,54.232,-4.405
+IM5,1,,IM5 1[A-Z][A-Z],Peel,54.222,-4.695
+IM5,2,,IM5 2[A-Z][A-Z],German,54.217,-4.668
+IM5,3,,IM5 3[A-Z][A-Z],Patrick,54.206,-4.694
+IM6,,,IM6 [1-9][A-Z][A-Z],Kirk Michael,54.285,-4.587
+IM7,1,,IM7 1[A-Z][A-Z],Maughold,54.299,-4.318
+IM7,2,,IM7 2[A-Z][A-Z],Sulby and Lezayre,54.319,-4.491
+IM7,3,,IM7 3[A-Z][A-Z],Jurby,54.36,-4.523
+IM7,4,,IM7 4[A-Z][A-Z],Andreas and Bride,54.367,-4.444
+IM7,5,,IM7 5[A-Z][A-Z],Ballaugh,54.312,-4.544
+IM8,,,IM8 [1-9][A-Z][A-Z],Ramsey,54.322,-4.384
+IM9,1,,IM9 1[A-Z][A-Z],Castletown,54.074,-4.654
+IM9,2,,IM9 2[A-Z][A-Z],Ballasalla,54.098,-4.631
+IM9,3,,IM9 3[A-Z][A-Z],Malew,54.103,-4.655
+IM9,4,,IM9 4[A-Z][A-Z],Arbory,54.098,-4.706
+IM9,5,,IM9 5[A-Z][A-Z],Port St Mary,54.078,-4.739
+IM9,6,,IM9 6[A-Z][A-Z],Port Erin,54.086,-4.758
