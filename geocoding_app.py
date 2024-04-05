@@ -60,3 +60,4 @@ if st.button(label="Geocode", type="primary"):
 
 st.markdown("""---""")
 st.write("Data source: Office for National Statistics licensed under the [Open Government Licence v.3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)")
+st.write("Code available [on GitHub](https://github.com/ioalexei/postcode_lookup_streamlit). Something broken? [Report it here](https://github.com/ioalexei/postcode_lookup_streamlit/issues).")
