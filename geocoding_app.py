@@ -47,8 +47,9 @@ if st.button(label="Geocode", type="primary"):
 
 
     if len(results)> 0: 
-        # TODO: Report how many records were matched out of how many inputs 
         st.markdown(results_title)
+        matched = len(results[~results.lat.isna()])
+        st.write(f"**{matched}** matches from **{len(query_list)}** inputs ({round(matched/len(query_list) * 100)}\%)")
         st.dataframe(results, hide_index=True, use_container_width=True)
         st.write("_Select cells to copy and paste or click the download icon to download as CSV_")
         if results.pcds.str.startswith(crown_dep_pcds).any(): 
@@ -57,5 +58,5 @@ if st.button(label="Geocode", type="primary"):
         st.markdown(results_title)
         st.write("No match found")
 
-
+st.markdown("""---""")
 st.write("Data source: Office for National Statistics licensed under the [Open Government Licence v.3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)")
