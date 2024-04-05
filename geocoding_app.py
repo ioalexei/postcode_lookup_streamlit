@@ -1,7 +1,5 @@
 import pandas as pd
-import numpy as np
 import streamlit as st
-import time
 from crown_dependencies import geocode_crown_dependencies as gcd
 
 st.title('Postcode lookup')
@@ -17,7 +15,7 @@ text_split = text_input.splitlines()
 query_list = []
 
 for i in text_split: 
-    query_list.append(i.strip())
+    query_list.append(i.upper().strip())
 
 # strip whitespace and force uppercase 
 #text_input = text_input.upper().replace(" ", "")
