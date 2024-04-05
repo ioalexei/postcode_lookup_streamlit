@@ -8,7 +8,7 @@ Enter postcodes (one per line) and click "geocode" to return latitude and longit
 
 ## Screenshot
 
-![Geocoder screenshot](./geocoder_screenshot.png)
+<kbd>![Geocoder screenshot](./geocoder_screenshot.png)</kbd>
 
 ## Data source
 
