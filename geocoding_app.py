@@ -56,3 +56,6 @@ if st.button(label="Geocode", type="primary"):
     else:
         st.markdown(results_title)
         st.write("No match found")
+
+
+st.write("Data source: Office for National Statistics licensed under the [Open Government Licence v.3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)")
