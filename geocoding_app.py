@@ -33,9 +33,10 @@ if st.button(label="Geocode", type="primary"):
             # process crown dependencies 
             crown_dep_pcds = ('JE', 'GY', 'IM')
             df_crown_deps = results[results.pcds.str.startswith(crown_dep_pcds)]
+            results_no_cd = results[~results.pcds.str.startswith(crown_dep_pcds)]
             df_crown_deps_gcd = gcd(list(df_crown_deps.pcds.values))
             df_crown_deps_gcd = df_crown_deps_gcd.reset_index().rename(columns={'index':'pcds'})
-            results = results.merge(df_crown_deps_gcd, how='inner')
+            results = pd.concat([results_no_cd, df_crown_deps_gcd])
             if len(results) < 2: 
                 results_title = "# Search result"
             else: 
